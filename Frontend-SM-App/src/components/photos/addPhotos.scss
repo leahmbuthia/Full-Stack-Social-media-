@@ -1,0 +1,73 @@
+.addPhotos {
+  width: 64.5vw;
+  height: auto;
+
+  .photo-header {
+    display: flex;
+    justify-content: space-between;
+    form {
+      margin-bottom: 1rem;
+      display: flex;
+
+      label {
+        display: flex;
+      }
+
+      button {
+        transition: 1s;
+        margin-left: 5px;
+
+
+        &:hover {
+          background-color: rgb(84, 218, 84);
+          border: none;
+        }
+      }
+    }
+
+    p {
+      margin-bottom: 0.5rem; /* Add some space below the "Total Photos About You" paragraph */
+      height: 3vh;
+    }
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(10vw, 1fr)
+    ); /* Adjusted grid definition */
+    width: 100%; /* Full width of the container */
+    gap: 1rem;
+
+
+  }
+
+  .image-holder {
+    width: 100%; /* Full width of the grid cell */
+
+    .action-icons{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      img{
+        cursor: pointer;
+        width: 1vw;
+        height: 2vh;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 20vh;
+      cursor: pointer;
+      transition: 1s;
+
+        &:hover {
+          opacity: 0.5;
+
+      }
+    }
+  }
+}

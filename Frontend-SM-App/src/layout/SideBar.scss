@@ -1,0 +1,24 @@
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 15vw;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: white;
+    border-right: 1px solid gainsboro;
+  }
+
+  @media screen and (max-width: 500px){
+    .sidenav {
+      display: none;
+      
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    .sidenav {
+      display: none;
+      
+    }
+  }

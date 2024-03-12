@@ -1,0 +1,121 @@
+.group-container{
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    .group-sub-titles{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem;
+        .sub-titles-left{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            h4{
+                color: #0F172A;
+            }
+            p{
+                color: #94A3B8;
+                font-weight: 500;
+                font-size: 14px;
+            }
+        }
+        .sub-titles-right{
+            padding: 10px;
+            .navlink{
+                text-decoration: none;
+                color: #2563EB;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+    .group-card-container{
+        // background-color: red;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center ;
+        gap: 20px;
+        flex-wrap: wrap;
+       padding: 1rem 1.2rem;
+       .card-contents {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      
+      .card-content {
+        background-color: #e8e9e9;
+        border-radius: 12px;
+        padding: 1.5rem;
+        padding-left: 100px;
+        padding-right: 100px;
+        box-sizing: border-box; 
+        flex-grow: 1;
+
+        .group-bottom{
+            display: flex;
+            margin-top: 10px;
+        }
+      }
+      
+      @media screen and (max-width: 820px) {
+        .card-content {
+          width: 100%; /* Set width to full for smaller screens */
+        }
+      }
+      
+    }
+}
+
+@media screen and (max-width: 500px){
+    .group-container{
+        width: 100%;
+        margin: 0 auto;
+  
+        .group-card-container{
+            width: 100%;
+            .card-contents{
+                padding: 15px;
+                width: 100%;
+                .group-page-icon{
+                    flex-direction: column-reverse;
+                    gap: 10px;
+                    .group-btn-card{
+                        width: 100%;
+                       
+                    }
+                }
+                  
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 820px){
+    .group-container{
+        width: 100%;
+        margin: 0 auto;
+        .group-card-container{
+            width: 100%;
+            flex-direction: row;
+            gap: 0;
+            padding: 10px;
+            .card-contents{
+                width: 48%;
+                margin:  0 auto;
+                .group-page-icon{
+                    gap: 10px;
+                    .group-btn-card{
+                        width: 100%;
+                       
+                    }
+                }
+                  
+            }
+
+        }
+    }
+}

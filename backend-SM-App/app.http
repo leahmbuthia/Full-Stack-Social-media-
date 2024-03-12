@@ -1,0 +1,250 @@
+### register user
+POST http://localhost:8100/api/v1/users/register
+Content-Type: application/json
+
+{
+    "Username": "Ndegwa1" ,
+    "Email": "jeffndegwa123456@gmail.com" ,
+    "Password": "@Jeff1123",
+    "TagName": "Ndegwa1",
+    "Location": "Kamuyu1"
+}
+
+### -- login user
+POST http://localhost:8100/api/v1/users/login
+Content-Type: application/json
+
+{
+    "Email": "arawa@gmail.com",
+    "Password": "@Arawa123"
+}
+
+### - get all users
+GET http://localhost:8100/api/v1/users/
+
+###-----------------------
+### get all post
+
+GET http://localhost:8100/api/v1/posts/
+
+### create POST
+POST http://localhost:8100/api/v1/posts/
+Content-Type: application/json
+
+{
+    "UserID": "084964a8-b1ba-43c0-a43d-793e253d8a8e" ,
+    "content": "Test this post" ,
+    "imageUrl": "https://media.istockphoto.com/id/588223710/photo/diwali-oil-lamp.jpg?s=1024x1024&w=is&k=20&c=45gNWiJ9jU-pc-CzVqM4TM7Hl5KDkNaE_gS7IkJ97lA=",
+    "videoUrl": "https://www.shutterstock.com/shutterstock/videos/1094020679/preview/stock-footage-sustainability-and-business-growth-by-a-corporate-team-in-partnership-and-unity-for-future-company.webm"
+}
+
+###
+POST http://localhost:8100/api/v1/friendships
+Content-Type: application/json
+
+{
+    "User1ID": "0a98690f-9ad0-4605-ae2e-9220e9a54e41" ,
+    "User2ID": "68855849-3cd6-4261-a5f3-8ff4898c7960"
+}
+
+
+###
+GET http://localhost:8100/api/v1/friendships
+
+
+###
+DELETE http://localhost:8100/api/v1/friendships/167ba401-d715-49ce-98b7-ee4b2206b50e
+
+
+###
+POST http://localhost:8100/api/v1/groups/
+Content-Type: application/json
+
+{
+    "GroupName": "My Group" ,
+    "Description": "This is a test group"
+}
+
+###
+GET http://localhost:8100/api/v1/groups/
+
+
+
+**********************************************************************************************************************************************************************************************************************************************
+###
+### create amessages
+POST http://localhost:8100/api/v1/messages
+Content-Type: application/json
+
+
+{
+    
+    "SenderID": "09594ee8-6372-47d6-a047-239af8ea2ae8" ,
+    "ReceiverID": "8bc9b236-4f33-4b17-877b-9e2033bd8df3",
+    "MessageDate":"2023-01-15",
+    "Content":"Message from User2 to User 1"
+  
+}
+
+### updating a single messages
+PUT http://localhost:8100/api/v1/messages/2c4f949a-1ea0-42c3-8698-b3198b0188fa
+Content-Type: application/json
+
+
+{
+     "Content": "I am loving this" ,
+    "Likes": 5,
+    "Comments": 6
+}
+
+
+### Fetching/getting all messages
+GET http://localhost:8100/api/v1/messages
+
+### Fetching/getting single messages
+GET http://localhost:8100/api/v1/messages/1
+
+
+
+### Deleting a single messages
+DELETE  http://localhost:8100/api/v1/messages/be2cf4dc-ad8c-47ba-9bfc-003dd4a15cf8
+
+
+******************************************************************************************************************************************************
+### create Members
+POST http://localhost:8100/api/v1/members
+Content-Type: application/json
+
+{
+     "GroupID":"",
+    "MemberID":"8bc9b236-4f33-4b17-877b-9e2033bd8df3"
+  
+  
+}
+
+### updating a single friends
+PUT http://localhost:8100/api/v1/members/8bc9b236-4f33-4b17-877b-9e2033bd8df3
+Content-Type: application/json
+
+{
+    "GroupID":"3",
+    "MemberID":"3"
+}
+
+
+### Fetching/getting all friends
+GET http://localhost:8100/api/v1/members/
+
+
+
+### Fetching/getting single friends
+GET http://localhost:8100/api/v1/members/8bc9b236-4f33-4b17-877b-9e2033bd8df3
+
+
+
+### Deleting a single friends
+DELETE  http://localhost:8100/api/v1/members/8bc9b236-4f33-4b17-877b-9e2033bd8df3
+
+
+
+*******************************************************************************************************************************************************************************************************************
+### //get all Photos
+GET http://localhost:8100/api/v1/photos
+
+### // create a new comment
+POST http://localhost:8100/api/v1/photos
+Content-Type: application/json
+
+{ 
+    "UserID": "09594ee8-6372-47d6-a047-239af8ea2ae8",
+    "PhotoURL": "Booom!!"
+}
+
+
+
+### // delete a comment
+DELETE http://localhost:8100/api/v1/photos/2112ca89-d655-4b96-815a-b161645e229c
+
+### //get a comment by its id 
+GET http://localhost:8100/api/v1/photos/
+
+### // update a comment by id
+PUT http://localhost:8100/api/v1/photos/1484f136-844e-4396-acc9-2e62ba282f41
+Content-Type: application/json
+
+{
+   "PhotoURL": "hrtuhjbcdn"
+  
+}
+******************************************************************************************************************************************************************************************
+ ##### EVENTS Table
+### //create Events
+POST http://localhost:8100/api/v1/events
+content-Type: application/json
+
+{
+    "EventName":"Fjhht",
+    "Description":"Leahs ",
+    "EventDate":"20-Feb-2024",
+    "EventPosterURL": "http//www/ruiro.kenya",
+    "Location":" Garden Resort"
+    
+   
+}
+//get all posts
+####
+GET http://localhost:8100/api/v1/events
+### //get Group  by id
+GET http://localhost:8100/api/v1/events
+
+
+### //update todo
+PUT http://localhost:8100/api/v1/events/1731971b-2ca8-4249-aecb-010622037800
+Content-Type: application/json
+
+{
+   "EventName":"FirstEvent",
+    "Description":"Ladies outing",
+    "EventDate":"20-Feb-2024",
+    "Location":"Ruiro Garden Resort",
+    "EventPosterURL": "http//www/ruiro.kenya"
+}
+
+
+### //delete Events
+ DELETE http://localhost:8100/api/v1/events/306c2ef2-c576-4c67-8667-034dcdba28bo
+
+ ***************************************************************************************************************************************************************************
+ ### EventAttendeee
+ ### Creating a event Attendee
+### Creating a event Attendee
+POST http://localhost:8100/api/v1/attendees
+Content-Type: application/json
+
+{
+    "EventID": "a2e9c48c-2c10-49cf-b8a1-7ad1aaf81097",
+    "AttendeeID":"4e66b1e2-9b5b-4cfb-adeb-34f0fad58219" 
+}
+
+
+### updating a single friends
+PUT http://localhost:8100/api/v1/attendees/2
+Content-Type: application/json
+
+{
+     "AttendeeID":"2"
+}
+
+
+### Fetching/getting all friends
+GET http://localhost:8100/api/v1/attendees
+
+
+
+### Fetching/getting single friends
+GET http://localhost:8100/api/v1/attendees/2
+
+
+
+### Deleting a single friends
+DELETE  http://localhost:8100/api/v1/attendees/1

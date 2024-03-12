@@ -1,0 +1,33 @@
+.ShortCutItems {
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    height: 25vh;
+    .heading {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-left: 5px;
+      height: 20%;
+      p {
+        color: #94a3b8;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+    .shortcut-item{
+      height: 80%;
+      margin-left: 5px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      padding: 5px 1px;
+      color: #0F172A;
+      p{
+          font-weight: 600;
+          font-size: 14px;
+      }
+    }
+  }
